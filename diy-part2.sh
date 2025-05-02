@@ -11,16 +11,16 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.199.1/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.199.1/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
-sed -i 's/LEDE/TR3000/g' package/base-files/luci2/bin/config_generate
+sed -i 's/ImmortalWrt/TR3000/g' package/base-files/files/bin/config_generate
 
 # Modify timezone
-sed -i 's/UTC/CST-8/g' package/base-files/luci2/bin/config_generate
+sed -i 's/GMT0/GMT+8/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
+# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
 
 # Modify default SSID name
-sed -i 's/LEDE/Cudy-0E2E/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/ImmortalWrt/Cudy-0E2E/g' package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
